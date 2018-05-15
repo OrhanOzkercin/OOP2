@@ -19,20 +19,14 @@ namespace Oop2
         Costumer costumer = Costumer.getInstance();
         Image img=Image.getInstance();
         Getdatabase db=Getdatabase.getInstance();
+        string path;
         private void btnFoto_Click(object sender, EventArgs e)
         {
-            try
-            {
-                db.UpdateImage(img.Connect());
-            }
-            catch (Exception)
-            {
 
-                
-            }
+            path = img.Connect();
 
-           
-            
+
+
         }
 
         private void Signup_Load(object sender, EventArgs e)
@@ -53,10 +47,10 @@ namespace Oop2
             {
                 MessageBox.Show("Password are not match!");
             }
-            costumer.Adress = txtAdress.Text;
-            costumer.Email = txtMail.Text;
+           costumer.Adress = txtAdress.Text;
+           costumer.Email = txtMail.Text;
 
-            if (radioButton1.Enabled)
+           if (radioButton1.Enabled)
             {
                 costumer.Gender = true;
             }
@@ -64,6 +58,19 @@ namespace Oop2
             {
                 costumer.Gender = false;    
             }
+            
+            try
+            {
+                db.UpdateImage(path, txtUsername.Text);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Somethings Wrong!");
+
+            }
+            db.CreateCostumer(costumer,path);
+           
+            
         }
     }
 }

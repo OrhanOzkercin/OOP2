@@ -6,51 +6,19 @@ using System.Threading.Tasks;
 
 namespace Oop2
 {
-    class Book
+    class Book: Product
     {
-        private int bookid;
-        private string bookname;
+     
+        
         private string writer;
         private string publisher;
-        private int price;
         private int page;
-        
+        private string description;
+
+
 
 
         private static Book instance;
-        private Book() { }
-        public static Book getInstance()
-        {
-            if (instance == null)
-                instance = new Book();
-            return instance;
-        }
-
-        public int Bookid
-        {
-            get
-            {
-                return bookid;
-            }
-
-            set
-            {
-                bookid = value;
-            }
-        }
-
-        public string Bookname
-        {
-            get
-            {
-                return bookname;
-            }
-
-            set
-            {
-                bookname = value;
-            }
-        }
 
         public string Writer
         {
@@ -78,19 +46,6 @@ namespace Oop2
             }
         }
 
-        public int Price
-        {
-            get
-            {
-                return price;
-            }
-
-            set
-            {
-                price = value;
-            }
-        }
-
         public int Page
         {
             get
@@ -104,6 +59,30 @@ namespace Oop2
             }
         }
 
-        
+        public string Description
+        {
+            get
+            {
+                return description;
+            }
+
+            set
+            {
+                description = value;
+            }
+        }
+
+        private Book() { }
+        public static Book getInstance()
+        {
+            if (instance == null)
+                instance = new Book();
+            return instance;
+        }
+
+        public override void ShowProperties()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

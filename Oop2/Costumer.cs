@@ -16,6 +16,7 @@ namespace Oop2
         private string password;
         private bool gender;
         private string image;
+        private string usertel;
        
 
         private static Costumer instance;
@@ -80,6 +81,19 @@ namespace Oop2
             set
             {
                 image = value;
+            }
+        }
+
+        public string Usertel
+        {
+            get
+            {
+                return usertel;
+            }
+
+            set
+            {
+                usertel = value;
             }
         }
     }

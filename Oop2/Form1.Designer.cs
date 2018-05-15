@@ -36,11 +36,26 @@
             this.btnPrev = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnAdmin = new System.Windows.Forms.Button();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.Admincheck = new System.Windows.Forms.RadioButton();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblWriter = new System.Windows.Forms.Label();
+            this.lblPublisher = new System.Windows.Forms.Label();
+            this.lblPrice = new System.Windows.Forms.Label();
+            this.lblPage = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureProfile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureLogin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureSignup)).BeginInit();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureProfile
@@ -58,6 +73,7 @@
             this.PictureLogin.Size = new System.Drawing.Size(48, 48);
             this.PictureLogin.TabIndex = 1;
             this.PictureLogin.TabStop = false;
+            this.PictureLogin.Click += new System.EventHandler(this.PictureLogin_Click);
             this.PictureLogin.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PictureLogin_MouseClick);
             // 
             // PictureSignup
@@ -67,7 +83,6 @@
             this.PictureSignup.Size = new System.Drawing.Size(48, 48);
             this.PictureSignup.TabIndex = 2;
             this.PictureSignup.TabStop = false;
-            this.PictureSignup.Click += new System.EventHandler(this.PictureSignup_Click);
             this.PictureSignup.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PictureSignup_MouseClick);
             // 
             // btnMyprofile
@@ -120,13 +135,6 @@
             this.btnAdmin.Text = "Administrator";
             this.btnAdmin.UseVisualStyleBackColor = true;
             // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(193, 62);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(593, 420);
-            this.flowLayoutPanel1.TabIndex = 11;
-            // 
             // Admincheck
             // 
             this.Admincheck.AutoSize = true;
@@ -138,13 +146,124 @@
             this.Admincheck.Text = "Admincheck";
             this.Admincheck.UseVisualStyleBackColor = true;
             // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.ItemSize = new System.Drawing.Size(58, 18);
+            this.tabControl1.Location = new System.Drawing.Point(229, 12);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(777, 575);
+            this.tabControl1.TabIndex = 13;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPage1.Controls.Add(this.flowLayoutPanel1);
+            this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(769, 549);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "tabPage1";
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.flowLayoutPanel1.Controls.Add(this.panel1);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(761, 541);
+            this.flowLayoutPanel1.TabIndex = 0;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(769, 549);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.lblPage);
+            this.panel1.Controls.Add(this.lblPrice);
+            this.panel1.Controls.Add(this.lblPublisher);
+            this.panel1.Controls.Add(this.lblWriter);
+            this.panel1.Controls.Add(this.lblName);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(188, 530);
+            this.panel1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(20, 19);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(149, 172);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Location = new System.Drawing.Point(66, 209);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(45, 13);
+            this.lblName.TabIndex = 1;
+            this.lblName.Text = "lblName";
+            // 
+            // lblWriter
+            // 
+            this.lblWriter.AutoSize = true;
+            this.lblWriter.Location = new System.Drawing.Point(66, 255);
+            this.lblWriter.Name = "lblWriter";
+            this.lblWriter.Size = new System.Drawing.Size(45, 13);
+            this.lblWriter.TabIndex = 2;
+            this.lblWriter.Text = "lblWriter";
+            // 
+            // lblPublisher
+            // 
+            this.lblPublisher.AutoSize = true;
+            this.lblPublisher.Location = new System.Drawing.Point(58, 301);
+            this.lblPublisher.Name = "lblPublisher";
+            this.lblPublisher.Size = new System.Drawing.Size(60, 13);
+            this.lblPublisher.TabIndex = 3;
+            this.lblPublisher.Text = "lblPublisher";
+            // 
+            // lblPrice
+            // 
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.Location = new System.Drawing.Point(68, 393);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(41, 13);
+            this.lblPrice.TabIndex = 4;
+            this.lblPrice.Text = "lblPrice";
+            // 
+            // lblPage
+            // 
+            this.lblPage.AutoSize = true;
+            this.lblPage.Location = new System.Drawing.Point(67, 347);
+            this.lblPage.Name = "lblPage";
+            this.lblPage.Size = new System.Drawing.Size(42, 13);
+            this.lblPage.TabIndex = 5;
+            this.lblPage.Text = "lblPage";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(798, 498);
+            this.ClientSize = new System.Drawing.Size(1018, 599);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.Admincheck);
-            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.btnAdmin);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnPrev);
@@ -159,6 +278,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureProfile)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureLogin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureSignup)).EndInit();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -174,8 +299,18 @@
         private System.Windows.Forms.Button btnPrev;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnAdmin;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.RadioButton Admincheck;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblPrice;
+        private System.Windows.Forms.Label lblPublisher;
+        private System.Windows.Forms.Label lblWriter;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblPage;
     }
 }
 

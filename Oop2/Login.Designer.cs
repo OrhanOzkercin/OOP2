@@ -45,6 +45,8 @@
             this.btnGiris.TabIndex = 103;
             this.btnGiris.Text = "Log in";
             this.btnGiris.UseVisualStyleBackColor = true;
+            
+            this.btnGiris.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnGiris_MouseClick);
             // 
             // pictureBox1
             // 

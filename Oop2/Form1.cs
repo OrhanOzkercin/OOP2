@@ -43,9 +43,10 @@ namespace Oop2
             signup.Show();
         }
 
-        private void PictureSignup_Click(object sender, EventArgs e)
+        private void PictureLogin_Click(object sender, EventArgs e)
         {
-
+            Login lg = new Login();
+            lg.Show();
         }
     }
 }
