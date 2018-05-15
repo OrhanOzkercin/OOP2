@@ -18,13 +18,21 @@ namespace Oop2
             InitializeComponent();
         }
         public static bool Isroot;
+        Costumer cs = Costumer.getInstance();
         private void isadmin()
         {
             Admincheck.Checked = Isroot;
         }
         private void MainForm_Load(object sender, EventArgs e)
         {
-            
+            if (cs.Username==null)
+            {
+                btnAdmin.Visible = false;
+                btnCard.Visible = false;
+                btnLogout.Visible = false;
+                btnMyprofile.Visible = false;
+                btnPrev.Visible = false;
+            }
             pictureProfile.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureProfile.Image = Image.getImage(@"http://torrent-oyun.gen.tr/images/defaultuser.png");
             PictureLogin.Image = Image.getImage(@"http://torrent-oyun.gen.tr/images/login.png");
